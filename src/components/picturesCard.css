@@ -1,15 +1,7 @@
-.pictures-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px 10px;
-    background-color: rgba(230, 228, 248, 0.4);
-    box-shadow: 0 4px 5px rgb(0, 0, 0, 0.2);
-
-}
-
 .pictures-card img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.3);
 }
