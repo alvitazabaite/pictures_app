@@ -1,0 +1,109 @@
+.picture-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.2s ease-in;
+}
+
+.picture-card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.picture-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.3);
+}
+
+.picture-card:hover img {
+    filter: brightness(0.75);
+}
+
+.picture-details {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    font-family: sans-serif;
+    color: white;
+    opacity: 0;
+}
+
+.picture-card:hover .picture-details {
+    opacity: 1;
+}
+
+.picture-name {
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 90%;
+}
+
+.picture-photographer {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.separator {
+    width: 20%;
+    height: 3px;
+    background: white;
+}
+
+.picture-favorite {
+    margin-top: 40px;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.picture-favorite.active {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.tooltip-container {
+    position: relative;
+    display: block;
+    width: 90%;
+    cursor: help;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
